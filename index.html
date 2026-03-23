@@ -1,114 +1,93 @@
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bio</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #000;
-      color: #fff;
-      overflow-x: hidden;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>mollyboi Bio</title>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #000;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+  }
 
-    .header {
-      position: relative;
-      width: 100%;
-      height: 220px;
-      overflow: hidden;
-    }
+  h1 {
+    margin-top: 40px;
+    font-size: 3rem;
+    text-align: center;
+  }
 
-    .header img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+    width: 100%;
+    max-width: 300px;
+  }
 
-    .blur {
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-      height: 80px;
-      backdrop-filter: blur(10px);
-      background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.9));
-    }
+  .links {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    align-items: center;
+  }
 
-    .container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-top: 40px;
-      animation: fadeIn 1.5s ease;
-    }
+  .link-button {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 12px 0;
+    width: 100%;
+    text-align: center;
+    border: 1px solid #444;
+    border-radius: 10px;
+    transition: 0.3s;
+    font-size: 1.2rem;
+    position: relative;
+    overflow: hidden;
+  }
 
-    .links {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-      width: 100%;
-      max-width: 300px;
-      align-items: center;
-    }
+  .link-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: 0.5s;
+  }
 
-    a {
-      text-decoration: none;
-      color: white;
-      padding: 12px 0;
-      width: 100%;
-      text-align: center;
-      border: 1px solid #444;
-      border-radius: 10px;
-      transition: 0.3s;
-      font-size: 1.2rem;
-      position: relative;
-      overflow: hidden;
-    }
+  .link-button:hover::before {
+    left: 100%;
+  }
 
-    a::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(120deg, transparent, rgba(255,255,255,0.2), transparent);
-      transition: 0.5s;
-    }
-
-    a:hover::before {
-      left: 100%;
-    }
-
-    a:hover {
-      transform: scale(1.05);
-      border-color: #888;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-  </style>
+  .link-button:hover {
+    transform: scale(1.05);
+    border-color: #888;
+  }
+</style>
 </head>
 <body>
 
-  <div class="header">
-    <img src="your-image.jpg" alt="cover">
-    <div class="blur"></div>
-  </div>
+<h1>mollyboi</h1>
 
-  <div class="container">
-    <div class="links">
-      <a href="#">Instagram</a>
-      <a href="#">Telegram</a>
-      <a href="#">YouTube</a>
-      <a href="#">Twitch</a>
-      <a href="#">Donate</a>
-      <a href="#">TikTok</a>
-    </div>
+<div class="container">
+  <div class="links">
+    <a class="link-button" href="https://www.instagram.com/moiiyboi/" target="_blank" rel="noopener noreferrer">Instagram</a>
+    <a class="link-button" href="https://www.youtube.com/@molIyboi" target="_blank" rel="noopener noreferrer">YouTube</a>
+    <a class="link-button" href="https://www.twitch.tv/moiiyboi" target="_blank" rel="noopener noreferrer">Twitch</a>
+    <a class="link-button" href="https://www.donationalerts.com/r/mollyboi" target="_blank" rel="noopener noreferrer">Donate</a>
   </div>
+</div>
 
 </body>
 </html>
